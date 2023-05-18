@@ -12,9 +12,12 @@
 	<div class="form-container sign-up-container">
 		<form action="registration.php" method="post">
 			<h1 class="reg">Зарегистрироваться</h1>
-        <input type="text" name="login-reg" placeholder="Login" />
-        <input type="password" name="password-reg" placeholder="Password" />
-			  <input type="password" name="password_repeat" placeholder="Repeat the password" />
+			<input type="text" name="fname-reg" placeholder="Firstname" />
+			<input type="text" name="lname-reg" placeholder="Lastname" />
+			<input type="email" name="email-reg" placeholder="Email" />
+			<input type="text" name="login-reg" placeholder="Login" />
+			<input type="password" name="password-reg" placeholder="Password" />
+			<input type="password" name="password-repeat" placeholder="Repeat the password" />
         <input type="submit" placeholder="Зарегистрироваться" class="button">
 		</form>
 	</div>
