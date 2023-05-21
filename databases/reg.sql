@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Май 16 2023 г., 22:36
+-- Время создания: Май 21 2023 г., 15:09
 -- Версия сервера: 8.0.30
--- Версия PHP: 7.2.34
+-- Версия PHP: 8.0.22
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `register`
+-- База данных: `Autorization`
 --
 
 -- --------------------------------------------------------
@@ -30,18 +30,18 @@ SET time_zone = "+00:00";
 CREATE TABLE `reg` (
   `id` int NOT NULL,
   `login` varchar(128) NOT NULL,
-  `password` varchar(128) NOT NULL
+  `password` varchar(128) NOT NULL,
+  `email` varchar(32) NOT NULL,
+  `firstname` varchar(32) NOT NULL,
+  `lastname` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Дамп данных таблицы `reg`
 --
 
-INSERT INTO `reg` (`id`, `login`, `password`) VALUES
-(1, '123', '1234'),
-(4, 'opa', '123'),
-(5, '12345', '12345'),
-(6, '1234log', '1234');
+INSERT INTO `reg` (`id`, `login`, `password`, `email`, `firstname`, `lastname`) VALUES
+(8, 'Oitlovich', '111', 'Oitlovich@yandex.ru', 'Sanya', 'Kopaev');
 
 --
 -- Индексы сохранённых таблиц
@@ -61,7 +61,7 @@ ALTER TABLE `reg`
 -- AUTO_INCREMENT для таблицы `reg`
 --
 ALTER TABLE `reg`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
