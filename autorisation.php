@@ -3,7 +3,7 @@
 $login = filter_var(trim($_POST['login-log']), FILTER_SANITIZE_STRING);
 $password = filter_var(trim($_POST['password-log']), FILTER_SANITIZE_STRING);
 
-$mysql = new mysqli('localhost', 'root', '', 'register');
+$mysql = new mysqli('localhost', 'root', '', 'Autorization');
 
 $result1 = $mysql->query("SELECT password FROM `reg` WHERE `login`= '$login';");
 $user1 = $result1->fetch_assoc();
